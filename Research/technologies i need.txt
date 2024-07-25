@@ -1,0 +1,6 @@
+type rabbitMQ in command prompt and click rabbitMQ command Prompt 
+rabbit MQ -> rabbitmq-plugins enable rabbitmq_management
+postman
+
+go inside AxonQuickStart -> axonquickstart-4.5.10 -> Axonserver and
+run ------------------  -> java -jar axonserver-4.5.10.jar

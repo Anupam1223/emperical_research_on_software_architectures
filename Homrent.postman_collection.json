@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "3c468cfd-e095-49e5-8b2b-b68586ff1988",
+		"name": "Homrent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rentflat (hexagonal)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"Anupam\",\r\n    \"lastname\":\"Siwakoti\",\r\n    \"age\":21,\r\n    \"maritalStatus\":false,\r\n    \"profession\":\"software engineer\",\r\n    \"flatID\":1\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9192/rentflat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"rentflat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add owner (hexagonal)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerName\":\"Anupam Siwakoti\",\r\n    \"location\":\"Jhapa\",\r\n    \"booking_amount\": 10000,\r\n    \"monthly_rent\": 15000,\r\n    \"type\":\"2bhk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9193/owner/addowner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9193",
+					"path": [
+						"owner",
+						"addowner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get booking amount (hexagonal)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9193/owner/getflatinfo?flatid=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9193",
+					"path": [
+						"owner",
+						"getflatinfo"
+					],
+					"query": [
+						{
+							"key": "flatid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rent flat (CQRS)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rentId\":\"1\",\r\n    \"firstname\":\"Anupam\",\r\n    \"lastname\":\"Siwakoti\",\r\n    \"age\":13,\r\n    \"maritalStatus\": false,\r\n    \"profession\": \"student\",\r\n    \"flatID\":\"200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/renting/rentflat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"renting",
+						"rentflat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add owner (CQRS)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerName\":\"Anupam Siwakoti\",\r\n    \"location\":\"Jhapa\",\r\n    \"booking_amount\": 10000,\r\n    \"monthly_rent\": 15000,\r\n    \"type\":\"2bhk\",\r\n    \"flatId\":\"200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/owner/addowner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"owner",
+						"addowner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get booking amount (CQRS)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flatId\":\"200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/owner/getflatinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"owner",
+						"getflatinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rentflat (layered)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"Anupam\",\r\n    \"lastname\":\"Siwakoti\",\r\n    \"age\":21,\r\n    \"maritalStatus\":false,\r\n    \"profession\":\"software engineer\",\r\n    \"flatID\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/renting/rentflat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"renting",
+						"rentflat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add owner (hexagonal)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerName\":\"Anupam Siwakoti\",\r\n    \"location\":\"Jhapa\",\r\n    \"booking_amount\": 10000,\r\n    \"monthly_rent\": 15000,\r\n    \"type\":\"2bhk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/renting/addowner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"renting",
+						"addowner"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,42 @@
+domain events:
+* https://medium.com/@mena.meseha/use-domain-events-in-microservices-fb99a16ed590
+* https://khalilstemmler.com/articles/typescript-domain-driven-design/chain-business-logic-domain-events/
+* https://aspnetboilerplate.com/Pages/Documents/EventBus-Domain-Events
+* https://eventuate.io/whyeventsourcing.html
+
+book references:
+1)	Domain Driven Design quickly
+2)	Implementing domain driven design
+3)	Practical Domain Driven Design in Enterprise Java
+4) 	Learning DomainDriven Design by Vlad Khononov (O’Reilly). Copyright 2022 Vladislav Khononov,
+	978-1-098-10013-1.
+5)	Patterns, Principles and practices of Domain-Driven Design (scott millett with Nick Tune)
+
+Articles:
+
+1)	In Search for a Scalable & Reactive Architecture of a Cloud Application: CQRS and Event Sourcing
+	Case Study
+
+video reference:
+1) 	DDD -> https://app.pluralsight.com/course-player?clipId=978a8bdd-7b12-4318-b350-be64787c5abf
+2)	pub-sub -> https://www.infoq.com/presentations/pub-sub-domains/
+
+links
+1)	Integrating bounded context -> https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts
+2)	CQRS and Event sourcing -> https://www.baeldung.com/cqrs-event-sourcing-java
+3)	CQRS and Event sourcing -> https://blog.nebrass.fr/playing-with-cqrs-and-event-sourcing-in-spring-boot-and-axon/
+4)	CQRS and Event sourcing -> https://www.baeldung.com/axon-cqrs-event-sourcing
+5)	Event driven architecture -> https://www.redhat.com/architect/illustrated-cqrs
+6)	Rabbitmq and springcloud -> https://stackabuse.com/spring-cloud-stream-with-rabbitmq-message-driven-microservices/
+7)	CQRS and Event sourcing -> https://medium.com/reaktika/event-sourcing-and-cqrs-with-axon-16984f682190
+8)	layered architecture -> https://www.javacodegeeks.com/2018/10/layered-architecture-running-just-5-minutes-spring-boot-part-1.html
+
+github link 
+1)	ttulka -> https://github.com/ttulka/ddd-example-ecommerce
+
+normal links
+*https://medium.com/design-microservices-architecture-with-patterns/layered-n-layer-architecture-e15ffdb7fa42
+
+*https://www.rabbitmq.com/documentation.html
+
+*https://www.linkedin.com/pulse/ugly-event-sourcing-real-world-production-issues-dennis-doomen
